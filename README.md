@@ -16,7 +16,16 @@ This is the "companion" repository to a paper that explores these issues in full
 Installation
 ============
 
-Install fsl, either via http://fsl.fmrib.ox.ac.uk or from your favourite package manager. 
+1. Install fsl, either via http://fsl.fmrib.ox.ac.uk or from your favourite package manager. 
+2. Ensure that the FSL libraries are reachable via matlab: you may need to add something like the following to your `startup.m` file: 
+```
+setenv( 'FSLDIR', '/usr/local/fsl'); %OS-specific
+fsldir = getenv('FSLDIR');
+fsldirmpath = sprintf('%s/etc/matlab',fsldir);
+path(path, fsldirmpath);
+clear fsldir fsldirmpath;
+```
+3. Download and install the repo, and add everything to your matlab path. 
 
 
 Example Datasets 
