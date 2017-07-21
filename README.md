@@ -13,7 +13,9 @@ One alternative approach is to acquire blip-reversed EPI data such that the dist
 This is the "companion" repository to a paper that explores these issues in full detail, which can also be found [here](Publication-miller-lau-tyler-HPTopup-mrm26839.pdf) If it is useful to you, **please cite it** as: 
 
 ```
-Miller, JJ; Lau, AZ; Tyler, DJ; Susceptibility-induced distortion correction in hyperpolarized echo planar imaging; Magnetic Resonance in Medicine, July 2017; DOI: 10.1002/mrm.26839. 
+Miller, JJ; Lau, AZ; Tyler, DJ; Susceptibility-induced distortion correction
+in hyperpolarized echo planar imaging; Magnetic Resonance in Medicine, July 2017; 
+DOI: 10.1002/mrm.26839. 
 ```
 
 Installation
