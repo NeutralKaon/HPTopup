@@ -1,7 +1,8 @@
 # HPTopup
 Image-Domain Distortion Correction for Hyperpolarised MRI with an EPI Readout. 
 
-Please see a forthcoming paper in Magnetic Resonance in Medicine for further information. 
+Please see [Susceptibility-induced Distortion Correction in Hyperpolarized Echo Planar Imaging](http://onlinelibrary.wiley.com/doi/10.1002/mrm.26839/pdf) for further information about the below.
+
 
 Introduction 
 ============
@@ -11,7 +12,7 @@ One alternative approach is to acquire blip-reversed EPI data such that the dist
 
 This is the "companion" repository to a paper that explores these issues in full detail, and can be found in the "publication" folder. If it is useful to you, **please cite it** as: 
 
-<ComingSoon> 
+Miller, JJ; Lau, AZ; Tyler, DJ; Susceptibility-induced distortion correction in hyperpolarized echo planar imaging; Magnetic Resonance in Medicine, July 2017; DOI: 10.1002/mrm.26839. 
 
 Installation
 ============
