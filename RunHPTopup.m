@@ -7,7 +7,7 @@ function out = RunHPTopup(imagesIn, peSignConvention, dn, params, varargin)
 % -- imagesIn should be a 1 x nmetabolite-long cell array containing 4D (xyzt)
 % images acquired with alternating phase encoding blips. It is assumed that
 % each metabolite image has the same matrix size (and an error will result
-% if this isn't the case). Data can be complex.
+% if this isn't the case). Data can (and indeed should) be complex.
 %
 % -- if peSignConvention == 0, it is assumed that the PE phase encoding sign
 % is [1 -1] alternating between frames; if it is 1, the convention is
