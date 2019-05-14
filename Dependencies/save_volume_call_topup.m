@@ -18,6 +18,8 @@ function distortion_corrected=save_volume_call_topup(im, fname, params, peSign, 
 % -- distortion_corrected: loaded in result of topup. 
 %
 % See also APPLY_COMPUTED_TOPUP
+% JM, 2015
+
 if nargin ~= 4 
     error('Incorrect number of arguments'); 
 elseif ndims(im) ~= 4 
@@ -30,9 +32,9 @@ elseif length(peSign)~=size(im,4)
     error('Incorrect specification for peSign: length differs to that of the image');
 end
 
-%NAUGHTY FLAG:
+% LINCOR_FLAG:
 % Set to 1 to do linear algebra; 0 to just apply eddy_correct.
-NAUGHTY_FLAG=1; 
+LINCOR_FLAG=1; 
 
 fname=fullfile(fname); 
 if ~strcmp(fname(end),filesep) 
@@ -84,7 +86,7 @@ if status ~= 0
     error('Calling topup failed'); 
 end
 disp('Susceptibility corrected; affine registration step'); 
-if NAUGHTY_FLAG==0
+if LINCOR_FLAG==0
 eddyCmd=sprintf(' cd %s; rm topup-uneddy-images.ecclog 2> /dev/null;$FSLDIR/bin/eddy_correct ./topup-unwarped-images.nii.gz ./topup-uneddy-images.nii.gz 1;',fname);
 else
    eddyCmd=sprintf(' cd %s; rm topup-uneddy-images.ecclog 2> /dev/null;$FSLDIR/bin/eddy_correct ./topup-unwarped-images.nii.gz ./topup-uneddy-images.nii.gz 1;',fname);

@@ -26,9 +26,9 @@ elseif length(peSign)~=size(im,4)
     error('Incorrect specification for peSign: length differs to that of the image');
 end
 
-%NAUGHTY FLAG:
-% Set to 1 to do linear algebra; 0 to just apply eddy_correct.
-NAUGHTY_FLAG=1;
+% INCOR_FLAG:
+% Set to 1 to do linear algebra co-registration; 0 to just apply eddy_correct.
+LINCOR_FLAG=1;
 %
 
 if ~strcmp(fname(end),filesep)
@@ -72,7 +72,7 @@ end
 mkdir(fname, 'transformations');
 
 %Read in top and bottom.mat, do linear algebra.
-if NAUGHTY_FLAG == 1
+if LINCOR_FLAG == 1
     constructstring=sprintf('cd %s; head -n 7 ./topup-uneddy-1.ecclog|tail -n 4 > ./transformations/top.mat; tail -n 5 ./topup-uneddy-0.ecclog|head -n 4 > ./transformations/bottom.mat',fname);
     call_fsl_local(constructstring);
     
