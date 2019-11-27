@@ -20,7 +20,7 @@ function distortion_corrected=save_volume_call_topup(im, fname, params, peSign, 
 % See also APPLY_COMPUTED_TOPUP
 % JM, 2015
 
-if nargin ~= 4 
+if nargin < 4 
     error('Incorrect number of arguments'); 
 elseif ndims(im) ~= 4 
     error('Incorrect size of input image'); 
